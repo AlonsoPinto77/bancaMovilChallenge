@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Banca Movil</string>
+    <string name="products_footer">Productos</string>
+    <string name="txt_login_dni">DNI</string>
+    <string name="txt_login_password">CONTRASEÑA</string>
+    <string name="btn_login_login">INGRESAR</string>
+    <string name="operations_footer">Operaciones</string>
+</resources>
