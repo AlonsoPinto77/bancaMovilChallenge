@@ -15,7 +15,7 @@ val coreModules = module {
 }
 
 val dataModules = module {
-    includes(databaseModule, networkModule, repositoryModule)
+    includes(networkModule, repositoryModule)
 }
 
 val presentationModule = module {

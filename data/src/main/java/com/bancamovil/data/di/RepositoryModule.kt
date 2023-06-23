@@ -14,6 +14,6 @@ val repositoryModule = module {
     single { LocalStorage(androidContext()) }
 
     factory<NetworkUtils>{NetworkUtilsImpl(androidContext())}
-    factory<ProductRepository>{ProductRepositoryImpl(get(), get()) }
+    factory<ProductRepository>{ProductRepositoryImpl(get()) }
     factory<LoginRepository>{LoginRepositoryImpl(get())}
 }

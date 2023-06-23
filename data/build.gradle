@@ -3,7 +3,7 @@ plugins {
     id 'org.jetbrains.kotlin.android'
 }
 
-apply plugin: 'kotlin-kapt'
+
 
 android {
     namespace 'com.bancamovil.data'
@@ -19,7 +19,7 @@ android {
 
     buildTypes {
         debug{
-            resValue("string", "api_url", "http://192.168.31.182:45455/")
+            resValue("string", "api_url", "https://e03ffdd7-6caf-436b-9d2d-6d70bf83bc93.mock.pstmn.io/")
         }
         release {
             minifyEnabled false
@@ -50,7 +50,7 @@ dependencies {
     // room
     def room_version = "2.3.0"
     implementation "androidx.room:room-runtime:$room_version"
-    kapt "androidx.room:room-compiler:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
     implementation "androidx.room:room-ktx:$room_version"
 
     // retrofit

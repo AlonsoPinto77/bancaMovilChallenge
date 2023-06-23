@@ -12,8 +12,15 @@ interface Api {
     @POST("login")
     suspend fun login(@Body request: LoginRequest): ApiResponse<String>
 
+    @POST("loginfail")
+    suspend fun loginFail(@Body request: LoginRequest): ApiResponse<String>
+
     @POST("products")
     suspend fun getProductsList(@Body request: ProductRequest): ApiResponse<List<ProductEntity>>
+
+    @POST("productsadd")
+    suspend fun getProductsListAdd(@Body request: ProductRequest): ApiResponse<List<ProductEntity>>
+
 
 
 }

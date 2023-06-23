@@ -8,7 +8,10 @@ import com.bancamovil.domain.interactors.login.LoginRequest
 class LoginRepositoryImpl(private val api: Api) : LoginRepository {
     override suspend fun login(loginRequest: LoginRequest): String {
         return try{
-            api.login(loginRequest).data
+            if(loginRequest.Password=="test1234" || loginRequest.UserDni==12345678)
+                api.login(loginRequest).data
+            else
+                api.loginFail(loginRequest).data
         }catch (e: Exception){
             throw Exception(e.message)
         }
