@@ -2,22 +2,20 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/mobile_navigation">
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_login">
 
     <fragment
         android:id="@+id/navigation_login"
         android:name="com.example.bancamovil.ui.login.LoginFragment"
         android:label="Login"
         tools:layout="@layout/fragment_login" >
-        <action
-            android:id="@+id/action_navigation_login_to_navigation_product"
-            app:destination="@id/navigation_product" />
     </fragment>
 
     <fragment
         android:id="@+id/navigation_product"
         android:name="com.example.bancamovil.ui.products.ProductsFragment"
         android:label="Productos"
-        tools:layout="@layout/fragment_products"
+        tools:layout="@layout/fragment_products"/>
 
 </navigation>

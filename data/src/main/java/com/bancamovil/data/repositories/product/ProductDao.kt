@@ -15,5 +15,5 @@ interface ProductDao {
     fun insert(productEntity: ProductEntity)
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertMultiple(product: List<ProductEntity>)
+    fun insertMultiple(product: List<ProductEntity>)
 }

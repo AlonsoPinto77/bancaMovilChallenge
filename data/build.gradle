@@ -59,6 +59,6 @@ dependencies {
     implementation 'com.squareup.okhttp3:logging-interceptor:4.8.0'
 
     // di
+    //implementation 'org.koin:koin-android:2.1.5'
     implementation("io.insert-koin:koin-android:3.4.2")
-    implementation("io.insert-koin:koin-core:3.4.2")
 }
