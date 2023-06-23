@@ -1,7 +1,8 @@
 package com.bancamovil.domain.interactors.product
 
 data class ProductRequest(
-    val dni: Int
+    val UserDni: Int,
+    val Count: Int
 ) {
 
 }

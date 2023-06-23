@@ -11,7 +11,7 @@ import kotlinx.coroutines.launch
 
 class LoginViewModel(private val useCase : LoginAccess) : ViewModel() {
 
-    val viewState = MutableLiveData<Resource<Login>>()
+    val viewState = MutableLiveData<Resource<String>>()
 
     fun login(loginRequest: LoginRequest){
         viewModelScope.launch {

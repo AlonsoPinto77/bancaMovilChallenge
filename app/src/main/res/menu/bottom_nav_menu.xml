@@ -4,10 +4,12 @@
     <item
         android:id="@+id/navigation_product"
         android:icon="@drawable/ic_launcher_foreground"
+        android:iconTint="#A1C238"
         android:title="@string/products_footer" />
 
     <item
         android:id="@+id/navigation_operations"
         android:icon="@drawable/ic_launcher_foreground"
+        android:iconTint="#A1C238"
         android:title="@string/operations_footer" />
 </menu>

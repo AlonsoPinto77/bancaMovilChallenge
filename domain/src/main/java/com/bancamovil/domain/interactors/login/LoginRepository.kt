@@ -1,5 +1,5 @@
 package com.bancamovil.domain.interactors.login
 
 interface LoginRepository {
-    suspend fun login(loginRequest: LoginRequest) : Login
+    suspend fun login(loginRequest: LoginRequest) : String
 }

@@ -19,7 +19,7 @@ android {
 
     buildTypes {
         debug{
-            resValue("string", "api_url", "https://qacaseronesv3.webcontrol.cl/WsAccesoNewland/Api/v1/")
+            resValue("string", "api_url", "http://192.168.31.182:45455/")
         }
         release {
             minifyEnabled false

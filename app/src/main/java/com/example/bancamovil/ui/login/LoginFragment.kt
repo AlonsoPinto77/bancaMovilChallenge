@@ -19,6 +19,7 @@ import org.koin.android.ext.android.inject
 class LoginFragment: Fragment() {
     private val loginViewModel: LoginViewModel by inject()
     private lateinit var binding: FragmentLoginBinding
+    private lateinit var nav_binding: FragmentLoginBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -26,8 +27,7 @@ class LoginFragment: Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentLoginBinding.inflate(inflater)
-        val root = inflater.inflate(R.layout.fragment_login, container, false)
-        return root
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -40,7 +40,6 @@ class LoginFragment: Fragment() {
         binding.btnLogin.setOnClickListener {
             if(!binding.edDni.text.toString().isNullOrEmpty() || !binding.edPassword.text.toString().isNullOrEmpty()){
                 login(binding.edDni.text.toString().toInt(), binding.edPassword.text.toString())
-                NavHostFragment.findNavController(this).navigate(R.id.navigation_product)
             }
         }
     }
@@ -56,12 +55,14 @@ class LoginFragment: Fragment() {
 
                 }
                 is Resource.Success -> {
-                    if (state.data!!.equals("ok"))
+                    if (state.data!!.equals("ok")){
                         PrefUtils.setIntPreference(
                             requireContext(),
                             PREF_USER_ID,
                             binding.edDni.text.toString().toInt()
                         )
+                        NavHostFragment.findNavController(this).navigate(R.id.navigation_product)
+                    }
                     else
                         Toast.makeText(
                             requireContext(),
